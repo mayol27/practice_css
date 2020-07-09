@@ -1,35 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta http-equiv="Content-Style-Type" content="text/css">
-<meta name="viewport" content="target-densitydpi=device-dpi, user-scalable=no, width=device-width">
-<meta name="keywords" content="不動産,ホームページ,制作,作成,管理,システム,物件" />
-<meta name="description" content="不動産事業に特化したホームページ制作・不動産管理システムならmiraie（みらいえ）" />
-<title>不動産ホームページ制作･不動産管理システム【みらいえ】</title>
+<meta name="viewport" content="target-densitydpi=device-dpi, user-scalable=no, width=device-width, initial-scale=1">
+<script>
+var ua = navigator.userAgent.toLowerCase();
+var isiOS = (ua.indexOf('iphone') > -1) || (ua.indexOf('ipad') > -1);
+if(isiOS) {
+  var viewport = document.querySelector('meta[name="viewport"]');
+  if(viewport) {
+    var viewportContent = viewport.getAttribute('content');
+    viewport.setAttribute('content', viewportContent + ', user-scalable=no');
+  }
+}
+</script>
+<title></title>
+<meta name="keywords" content=",," />
+<meta name="description" content="" />
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PJLQ9VQ');</script>
 <!-- End Google Tag Manager -->
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <![endif]-->
 <!-- CSS読込 -->
 <link rel="stylesheet" href="css/base.css" type="text/css" />
-<link rel="stylesheet" href="css/common.css" type="text/css" />
-<!-- フォントオーサム -->
-<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="js/slick.css" rel="stylesheet" type="text/css">
+<link href="js/slick-theme.css" rel="stylesheet" type="text/css">
+<link href="js/mega.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <!-- ファビコン読込 -->
 <link rel="shortcut icon" href="img/favicon.ico" />
 <meta http-equiv="imagetoolbar" content="no">
 <!-- 検索有無設定 -->
-<meta name="robots" content="noindex,nofollow" />
+<meta name="robots" content="nofollow" />
 <!-- googlefont -->
 <link href='https://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 <!-- jquery読込 -->
@@ -48,12 +53,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="js/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-ja.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/jQuery-Validation-Engine-master/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 <script>
-  $(function(){
-    jQuery("#form form").validationEngine();
-  });
-</script>
-<!-- スムーススクロール -->
-<script type="text/javascript">
 $(function(){
    $('a[href^="#"]').on('click', function(){
       var speed = 1000;
@@ -65,8 +64,6 @@ $(function(){
    });
 });
 </script>
-<!-- 背景変換 -->
-
 <!-- へッダー消し -->
 <script type="text/javascript">
 $(window).scroll(function() {
@@ -131,37 +128,37 @@ html body .view_tab {
 html body .view_sp {
     display: block !important;
 }
+html body table.view_sp {
+    display: table !important;
+}
+html body table.view_sp tr {
+    display: table !important;
+}
+html body table.view_sp th {
+    display: table !important;
+}
+html body table.view_sp td {
+    display: table !important;
+}
 html body .view_tabsp {
     display: block !important;
+}
+html body table.view_tabsp {
+    display: table !important;
+}
+html body table.view_tabsp tr {
+    display: table !important;
+}
+html body table.view_tabsp th {
+    display: table !important;
+}
+html body table.view_tabsp td {
+    display: table !important;
 }
 }
 /* エラーメッセージ　赤文字設定 */
 .error_msg {
     color: #ff2e5a !important;
-}
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-}
-@media only screen
-and (min-width: 1051px){
-.agreement input[type=checkbox] {
-width: 2.25vw !important;
-height: 2.25vw !important;
-}
-}
-@media only screen
-and (max-width: 1050px){
-.agreement input[type=checkbox] {
-width: 4.5vw !important;
-height: 4.5vw !important;
-}
-}
-@media only screen
-and (max-width: 770px){
-.agreement input[type=checkbox] {
-width: 6vw !important;
-height: 6vw !important;
-}
 }
 </style>
 
@@ -173,1163 +170,1185 @@ height: 6vw !important;
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="fixed_top" style="background-color:rgba(255,255,255,0.75);">
-<section class="view_pc">
-	<ul class="flex flex_center tspace_05 bspace_05">
-		<li class="f_sub width_2"> </li>
-		<li class="f_sub width_11">
-			<a href="#"><img class="fix_zoom" src="img/logo.png"></a>
-		</li>
-		<li class="f_sub width_34"> </li>
-		<li class="f_sub width_20 txt_center line_h_100">
-			<a class="square_btn bg_base1 white width_100 box_radius_10 line_h_100 font_125 bold txt_tpad_05 txt_bpad_05" href="tel:0332092750">
-			<span class="font_60 white bold line_h_100 txt_bpad_05">[平日] 10:00～21:00<br></span>
-			<i class="fa fa-phone-square white"></i>&nbsp;03-3209-2750&nbsp;<i class="far fa-arrow-alt-circle-right white"></i>
+	<section class="view_pc">
+		<ul class="flex flex_center tspace_05 bspace_05">
+			<li class="f_sub width_2"> </li>
+			<li class="f_sub width_11">
+				<a href="#"><img class="fix_zoom" src="img/logo.png"></a>
+			</li>
+			<li class="f_sub width_34"> </li>
+			<li class="f_sub width_20 txt_center line_h_100">
+				<a class="square_btn bg_base1 white width_100 box_radius_10 line_h_100 font_125 bold txt_tpad_05 txt_bpad_05" href="tel:0332092750">
+				<span class="font_60 white bold line_h_100 txt_bpad_05">[平日] 10:00～21:00<br></span>
+				<i class="fa fa-phone-square white"></i>&nbsp;03-3209-2750&nbsp;<i class="far fa-arrow-alt-circle-right white"></i>
+				</a>
+			</li>
+			<li class="f_sub width_20">
+				<a class="square_btn bg_matcha white width_100 box_radius_10 line_h_100 font_125 bold txt_tpad_05 txt_bpad_05" href="#form">
+				<span class="font_60 white bold line_h_100 txt_bpad_05">メールでのお問い合わせはコチラ<br></span>
+				<i class="far fa-envelope white"></i>&nbsp;お問い合わせ&nbsp;<i class="far fa-arrow-alt-circle-right white"></i>
 			</a>
-		</li>
-		<li class="f_sub width_20">
-			<a class="square_btn bg_matcha white width_100 box_radius_10 line_h_100 font_125 bold txt_tpad_05 txt_bpad_05" href="#form">
-			<span class="font_60 white bold line_h_100 txt_bpad_05">メールでのお問い合わせはコチラ<br></span>
-			<i class="far fa-envelope white"></i>&nbsp;お問い合わせ&nbsp;<i class="far fa-arrow-alt-circle-right white"></i>
-		</a>
-		</li>
-		<li class="f_sub width_2"> </li>
-	</ul>
-</section>
+			</li>
+			<li class="f_sub width_2"> </li>
+		</ul>
+	</section>
 
-<section class="view_tabsp">
-	<table class="wrapper_100">
-		<tbody class="wrapper_100">
-			<tr class="tspace_05 bspace_05 width_100">
-			<td class="width_1"><!-- スペース --></td>
-			<td class="width_22"><a href="#"><img class="fix_zoom" src="img/logo.png"></a></td>
-			<td class="width_12"><!-- スペース --></td>
+	<section class="view_tabsp">
+		<table class="wrapper_100">
+			<tbody class="wrapper_100">
+				<tr class="tspace_05 bspace_05 width_100">
+				<td class="width_1"></td>
+				<td class="width_22"><a href="#"><img class="fix_zoom" src="img/logo.png"></a></td>
+				<td class="width_12"></td>
+				<td class="width_32 txt_center">
+					<a class="square_btn bg_base1 white width_100 box_radius_5 font_75 bold line_h_150" href="tel:0332092750">
+						<span class="font_50 white bold line_h_100 view_tabsp txt_tpad_05">[平日] 10:00～21:00</span>
+						<i class="fa fa-phone-square white"></i> 03-3209-2750
+					</a>
+				</td>
 			<td class="width_32 txt_center">
-				<a class="square_btn bg_base1 white width_100 box_radius_5 font_75 bold line_h_150" href="tel:0332092750">
-					<span class="font_50 white bold line_h_100 view_tabsp txt_tpad_05">[平日] 10:00～21:00</span>
-					<i class="fa fa-phone-square white"></i> 03-3209-2750
+				<a class="square_btn bg_matcha white width_100 box_radius_5 font_75 bold line_h_150" href="#form">
+					<span class="font_50 white bold line_h_100 view_tabsp txt_tpad_05">メールのお問い合わせはコチラ</span>
+					<i class="far fa-envelope white"></i> お問い合わせ
 				</a>
 			</td>
-		<td class="width_32 txt_center">
-			<a class="square_btn bg_matcha white width_100 box_radius_5 font_75 bold line_h_150" href="#form">
-				<span class="font_50 white bold line_h_100 view_tabsp txt_tpad_05">メールのお問い合わせはコチラ</span>
-				<i class="far fa-envelope white"></i> お問い合わせ
-			</a>
-		</td>
-		<td class="width_1"><!-- スペース --></td>
-		</tr>
-		</tbody>
-	</table>
-</section>
+			<td class="width_1"></td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
 </header>
 
 <main>
 
-<section class="wrapper_100">
-	<h1>
-		<img class="view_pc fix_zoom" src="img/top.png" alt="">
-		<img class="view_tabsp fix_zoom" src="img/top_sp.png" alt="">
-	</h1>
-</section>
+	<section class="wrapper_100">
+		<h1>
+			<img class="view_pc fix_zoom" src="img/top.png" alt="">
+			<img class="view_tabsp fix_zoom" src="img/top_sp.png" alt="">
+		</h1>
+	</section>
 
-<section class="wrapper_100 bg_base1">
-	<div class="space_1"><!-- スペース --></div>
-	<div class="view_tabsp space_1"><!-- スペース --></div>
+	<section class="wrapper_100 bg_base1">
+		<div class="space_1"></div>
+		<div class="view_tabsp space_1"></div>
+			<p class="view_pc white font_200 bold line_h_200 txt_center">
+			無料デモンストレーション実施中！
+			</p>
+			<p class="view_tabsp white font_150 bold line_h_150 txt_center">
+			無料デモンストレーション実施中！
+			</p>
+		<div class="space_1"></div>
+		<ul class="cont_wrapper_50 flex_1">
+			<li class="f_sub width_45 txt_center">
+				<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="tel:0332092750">
+					<div class="space_1"></div>
+					<span class="font_75 bold line_h_100 txt_bpad_05">[平日] 10:00～21:00<br></span>
+					<i class="fa fa-phone-square"></i>&nbsp;03-3209-2750&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
+					<div class="space_1"></div>
+				</a>
+			</li>
+			<li class="f_sub width_45 txt_center">
+			<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="#form">
+			<div class="space_1"></div>
+			<span class="font_75 bold line_h_100 txt_bpad_05">入力は1分で完了します！<br></span>
+			<i class="far fa-envelope"></i>&nbsp;お問い合わせ&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
+			<div class="space_1"></div>
+			</a>
+			</li>
+		</ul>
+		<div class="space_3"></div>
+	</section>
+
+	<section class="wrapper_100 bg_base2">
+		<div class="cont_wrapper_75">
+			<div class="space_5"></div>
+			<div class="space_2"></div>
+			<p class="view_pc font_200 bold line_h_150 txt_center base1">
+			不動産ポータル、こんなお悩みありませんか？
+			</p>
+			<p class="view_tabsp font_150 bold line_h_150 txt_center base1">
+			不動産ポータル、<br>こんなお悩みありませんか？
+			</p>
+			<div class="space_2"></div>
+			<div class="view_pc flex flex_center wrapper_85">
+				<div class="width_30 f_left">
+					<div class="wrapper_50">
+						<img class="fix_zoom" src="img/nayami.png">
+					</div>
+				</div>
+				<div class="width_70 f_right">
+					<div class="space_2"></div>
+					<ul class="flex flex_center">
+						<li class="f_sub width_9">
+							<img class="fix_zoom" src="img/check.png">
+						</li>
+						<li class="f_sub width_88">
+							<p class="font_125 line_h_150">
+							ポータルからの集客が低下している
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+</p>
+							</p>	
+						</li>
+					</ul>
+					<div class="space_1"></div>
+					<ul class="flex flex_center">
+						<li class="f_sub width_9">
+							<img class="fix_zoom" src="img/check.png">
+						</li>
+						<li class="f_sub width_88">
+							<p class="font_125 line_h_150">
+							作業効率はあがったけれど、反響率は期待外れ
+							</p>
+						</li>
+					</ul>
+					<div class="space_1"></div>
+					<ul class="flex flex_center">
+						<li class="f_sub width_9">
+							<img class="fix_zoom" src="img/check.png">
+						</li>
+						<li class="f_sub width_88">
+							<p class="font_125 line_h_150">
+							管理画面が使いづらい
+							</p>
+						</li>
+					</ul>
+					<div class="space_1"></div>
+					<ul class="flex flex_center">
+						<li class="f_sub width_9">
+							<img class="fix_zoom" src="img/check.png">
+						</li>
+						<li class="f_sub width_88">
+							<p class="font_125 line_h_150">
+							『ポータル頼り』で将来が不安
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="view_tabsp">
+				<div class="wrapper_25">
+					<img class="fix_zoom" src="img/nayami.png">
+				</div>
+				<div class="space_2"></div>
+				<ul class="flex flex_center">
+					<li class="f_sub width_8">
+						<img class="fix_zoom" src="img/check.png">
+					</li>
+					<li class="f_sub width_89">
+						<p class="font_100 line_h_150">
+						ポータルからの集客が低下している
+						</p>
+					</li>
+				</ul>
+				<div class="space_1"></div>
+				<ul class="flex flex_center">
+					<li class="f_sub width_8">
+						<img class="fix_zoom" src="img/check.png">
+					</li>
+					<li class="f_sub width_89">
+						<p class="font_100 line_h_150">
+						作業効率はあがったけれど、反響率は期待外れ
+						</p>
+					</li>
+				</ul>
+				<div class="space_1"></div>
+				<ul class="flex flex_center">
+					<li class="f_sub width_8">
+						<img class="fix_zoom" src="img/check.png">
+					</li>
+					<li class="f_sub width_89">
+						<p class="font_100 line_h_150">
+						管理画面が使いづらい
+						</p>
+					</li>
+				</ul>
+				<div class="space_1"></div>
+				<ul class="flex flex_center">
+					<li class="f_sub width_8">
+						<img class="fix_zoom" src="img/check.png">
+					</li>
+					<li class="f_sub width_89">
+						<p class="font_100 line_h_150">
+						『ポータル頼り』で将来が不安
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="space_5"></div>
+			<div class="space_3"></div>
+		</div>
+	</section>
+
+	<section class="wrapper_100 bg_white">
+		<div class="space_5"></div>
+		<div class="space_2"></div>
+		<p class="view_pc font_150 bold line_h_150 txt_center">
+			<span class="font_200">作業効率</span>を上げつつ<span class="font_200">反響率</span>も上げたいなら
+		</p>
+		<p class="view_pc font_300 bold line_h_150 txt_center">
+			<span class="base1">AI</span>と<span class="base1">ビッグデータ</span>を駆使した<span class="base1">みらいえ</span>！
+		</p>
+		<p class="view_tabsp font_75 bold line_h_150 txt_center">
+			<span class="font_100">作業効率</span>を上げつつ<span class="font_100">反響率</span>も上げたいなら
+		</p>
+		<p class="view_tabsp font_150 bold line_h_150 txt_center">
+			<span class="base1">AI</span>と<span class="base1">ビッグデータ</span>を駆使した<br><span class="base1">みらいえ</span>！
+		</p>
+		<div class="space_3"></div>
+		<div class="cont_wrapper_75">
+			<ul class="flex flex_center cont_wrapper_85">
+				<li class="f_sub width_32 bg_img">
+					<img class="fix_zoom" src="img/point.png">
+					<div class="t_50 txt_center">
+						<p class="view_pc font_200 line_h_150 base1">
+						自動ツールで<br>
+							<span class="bold base1 u_line_m_red">工数大幅削減</span>
+						</p>
+						<p class="view_tabsp font_100 line_h_150 base1">
+						自動ツールで<br>
+							<span class="bold base1 u_line_t_red">工数大幅削減</span>
+						</p>
+					</div>
+				</li>
+				<li class="f_sub width_32 bg_img">
+					<img class="fix_zoom" src="img/point.png">
+					<div class="t_50 txt_center">
+						<p class="view_pc font_200 line_h_150 base1">
+							<span class="bold base1 u_line_m_red">AI</span>による<br>
+							<span class="bold base1 u_line_m_red">ポータルSEO</span>
+						</p>
+						<p class="view_tabsp font_100 line_h_150 base1">
+							<span class="bold base1 u_line_t_red">AI</span>による<br>
+							<span class="bold base1 u_line_t_red">ポータルSEO</span>
+						</p>
+					</div>
+				</li>
+				<li class="f_sub width_32 bg_img">
+					<img class="fix_zoom" src="img/point.png">
+					<div class="t_50 txt_center">
+						<p class="view_pc font_200 line_h_150 base1">
+							<span class="bold base1 u_line_m_red">直感的</span>な<br>
+							操作画面
+						</p>
+						<p class="view_tabsp font_100 line_h_150 base1">
+							<span class="bold base1 u_line_t_red">直感的</span>な<br>
+							操作画面
+						</p>
+					</div>
+				</li>
+			</ul>
+			<div class="space_3"></div>
+			<div class="cont_wrapper_90 txt_center">
+				<p class="view_pc font_125">
+				AIとビッグデータを不動産業界で初めて導入し、<br>
+				データの分析だけでなく実作業までサポートすることができるようになりました。<br>
+				これにより他社不動産管理システムと劣ることなく作業効率UPしつつ、<br>
+				ポータルサイトにてより多くのユーザーにみてもらうことで<br>
+				集客・売上UPまで実現できるのがこの「みらいえ」です。
+				</p>
+				<p class="view_tabsp font_100">
+				AIとビッグデータを不動産業界で初めて導入し、<br>
+				データの分析だけでなく実作業まで<br>
+				サポートすることができるようになりました。<br>
+				これにより他社不動産管理システムと<br>
+				劣ることなく作業効率UPしつつ、<br>
+				ポータルサイトにて<br>
+				より多くのユーザーにみてもらうことで<br>
+				集客・売上UPまで実現できるのが<br>
+				この「みらいえ」です。
+				</p>
+			</div>
+			<div class="space_5"></div>
+			<div class="space_3"></div>
+		</div>
+	</section>
+
+	<section class="wrapper_100 bg_white view_pc">
+		<div class="bg_img wrapper_100">
+			<img class="fix_zoom" src="img/bg_1.png">
+			<div class="t50_r0 txt_left rspace_5">
+				<p class="font_200 bold line_h_150 base1">
+				AI導入で業務<span class="mincho base1">70％</span>カットに成功
+				</p>
+				<p class="font_150 bold line_h_150 base1">
+				ポータルごとのレイアウトにも自動最適化
+				</p>
+				<div class="space_2"></div>
+				<p class="font_125 line_h_150">
+				物件入力など、これまで手間のかかった作業を<br>
+				人工知能（AI）により自動化。<br>
+				入力補助で業務効率がアップ、<br>
+				負荷を70％削減(当社比)することに成功しました。<br>
+				画像の自動振り分けからコメント作成まで<br>
+				人工知能がサポート。<br>
+				文章を考えるのが苦手な人や新人スタッフでも<br>
+				簡単にご利用いただけます。
+				</p>
+			</div>
+		</div>
+		<div class="bg_img wrapper_100">
+			<img class="fix_zoom" src="img/bg_2.png">
+			<div class="t50_l0 txt_left lspace_5">
+				<p class="font_150 bold line_h_150 base1">
+				ビッグデータを活用して
+				</p>
+				<p class="font_200 bold line_h_150 base1">
+				ポータルサイトSEOにも対応
+				</p>
+				<div class="space_2"></div>
+				<p class="font_125 line_h_150">
+				ビッグデータを活用したポータルサイト内のSEO対策で、<br>
+				周辺施設情報、空室情報も集約するように設計し、<br>
+				「不動産ポータル内」「自然検索内」共に<br>
+				検索で上位表示できるようにリンク構造を最適化。<br>
+				集客に大きな影響を与えます。
+				</p>
+			</div>
+		</div>
+		<div class="bg_img wrapper_100">
+			<img class="fix_zoom" src="img/bg_3.png">
+			<div class="t50_r0 txt_left rspace_5">
+				<p class="font_200 bold line_h_150 base1">
+				自慢の使い勝手
+				</p>
+				<p class="font_150 bold line_h_150 base1">
+				ITに疎い方でも簡単に使いこなしていただけます
+				</p>
+				<div class="space_2"></div>
+				<p class="font_125 line_h_150">
+				みらいえは機能の提供で満足せず、<br>
+				利用されるユーザーの使い勝手を最優先で考えて<br>
+				基礎から設計したシステムです。<br>
+				「管理画面が使いにくい」<br>
+				「高度な機能ばかりで使いこなせない」<br>
+				「簡単な一括更新ができなくて不便」<br>
+				といったよくある不満を解決しています！
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg_base2 wrapper_100 bg_white view_tabsp txt_center">
+		<div class="space_5"></div>
+		<div class="space_2"></div>
+		<p class="font_150 bold line_h_150 base1">
+			AI導入で業務<span class="mincho base1 bold">70％</span>カットに成功
+		</p>
+		<p class="font_125 bold line_h_150 base1">
+			ポータルごとのレイアウトにも自動最適化
+		</p>
+		<div class="space_2"></div>
+		<img class="fix_zoom" src="img/bg_1_sp.png">
+		<div class="cont_wrapper_75">
+			<div class="space_2"></div>
+			<p class="font_100 line_h_150">
+			物件入力など、<br>
+			これまで手間のかかった作業を<br>
+			人工知能（AI）により自動化。<br>
+			入力補助で業務効率がアップ、<br>
+			負荷を70％削減(当社比)することに<br>
+			成功しました。<br>
+			画像の自動振り分けからコメント作成まで<br>
+			人工知能がサポート。<br>
+			文章を考えるのが苦手な人や<br>
+			新人スタッフでも<br>
+			簡単にご利用いただけます。
+			</p>
+		</div>
+		<div class="space_5"></div>
+		<div class="space_3"></div>
+	</section>
+
+	<section class="bg_white wrapper_100 bg_white view_tabsp txt_center">
+		<div class="space_5"></div>
+		<div class="space_2"></div>
+		<p class="font_125 bold line_h_150 base1">
+		ビッグデータを活用して
+		</p>
+		<p class="font_150 bold line_h_150 base1">
+		ポータルサイトSEOにも対応
+		</p>
+		<div class="space_2"></div>
+		<img class="fix_zoom" src="img/bg_2_sp.png">
+		<div class="cont_wrapper_75">
+			<div class="space_2"></div>
+			<p class="font_100 line_h_150">
+			ビッグデータを活用した<br>
+			ポータルサイト内のSEO対策で、<br>
+			周辺施設情報、空室情報も<br>
+			集約するように設計し、<br>
+			「不動産ポータル内」「自然検索内」共に<br>
+			検索で上位表示できるように<br>
+			リンク構造を最適化。<br>
+			集客に大きな影響を与えます。
+			</p>
+		</div>
+		<div class="space_5"></div>
+		<div class="space_3"></div>
+	</section>
+
+	<section class="bg_base2 wrapper_100 bg_white view_tabsp txt_center">
+		<div class="space_5"></div>
+		<div class="space_2"></div>
+		<p class="font_150 bold line_h_150 base1">
+		自慢の使い勝手
+		</p>
+		<p class="font_125 bold line_h_150 base1">
+		ITに疎い方でも簡単に使いこなしていただけます
+		</p>
+		<div class="space_2"></div>
+		<img class="fix_zoom" src="img/bg_3_sp.png">
+		<div class="cont_wrapper_75">
+			<div class="space_2"></div>
+			<p class="font_100 line_h_150">
+			みらいえは機能の提供で満足せず、<br>
+			利用されるユーザーの<br>
+			使い勝手を最優先で考えて<br>
+			基礎から設計したシステムです。<br>
+			「管理画面が使いにくい」<br>
+			「高度な機能ばかりで使いこなせない」<br>
+			「簡単な一括更新ができなくて不便」<br>
+			といったよくある不満を解決しています！
+			</p>
+		</div>
+		<div class="space_5"></div>
+		<div class="space_3"></div>
+	</section>
+
+	<section class="wrapper_100 bg_base1">
+		<div class="space_1"></div>
+		<div class="view_tabsp space_1"></div>
 		<p class="view_pc white font_200 bold line_h_200 txt_center">
 		無料デモンストレーション実施中！
 		</p>
 		<p class="view_tabsp white font_150 bold line_h_150 txt_center">
 		無料デモンストレーション実施中！
 		</p>
-	<div class="space_1"><!-- スペース --></div>
-	<ul class="cont_wrapper_50 flex_1">
-		<li class="f_sub width_45 txt_center">
-			<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="tel:0332092750">
-				<div class="space_1"><!-- スペース --></div>
-				<span class="font_75 bold line_h_100 txt_bpad_05">[平日] 10:00～21:00<br></span>
-				<i class="fa fa-phone-square"></i>&nbsp;03-3209-2750&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
-				<div class="space_1"><!-- スペース --></div>
-			</a>
-		</li>
-		<li class="f_sub width_45 txt_center">
-		<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="#form">
-		<div class="space_1"><!-- スペース --></div>
-		<span class="font_75 bold line_h_100 txt_bpad_05">入力は1分で完了します！<br></span>
-		<i class="far fa-envelope"></i>&nbsp;お問い合わせ&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
-		<div class="space_1"><!-- スペース --></div>
-		</a>
-		</li>
-	</ul>
-	<div class="space_3"><!-- スペース --></div>
-</section>
+		<div class="space_1"></div>
+		<ul class="cont_wrapper_50 flex_1">
+			<li class="f_sub width_45 txt_center">
+				<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="tel:0332092750">
+					<div class="space_1"></div>
+					<span class="font_75 bold line_h_100 txt_bpad_05">[平日] 10:00～21:00<br></span>
+					<i class="fa fa-phone-square"></i>&nbsp;03-3209-2750&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
+					<div class="space_1"></div>
+				</a>
+			</li>
+			<li class="f_sub width_45 txt_center">
+				<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="#form">
+					<div class="space_1"></div>
+					<span class="font_75 bold line_h_100 txt_bpad_05">入力は1分で完了します！<br></span>
+					<i class="far fa-envelope"></i>&nbsp;お問い合わせ&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
+					<div class="space_1"></div>
+				</a>
+			</li>
+		</ul>
+		<div class="space_3"></div>
+	</section>
 
-<section class="wrapper_100 bg_base2">
-<div class="cont_wrapper_75">
-<div class="space_5"><!-- スペース --></div>
-<div class="space_2"><!-- スペース --></div>
-<p class="view_pc font_200 bold line_h_150 txt_center base1">
-不動産ポータル、こんなお悩みありませんか？
-</p>
-<p class="view_tabsp font_150 bold line_h_150 txt_center base1">
-不動産ポータル、<br>こんなお悩みありませんか？
-</p>
-<div class="space_2"><!-- スペース --></div>
-<div class="view_pc flex flex_center wrapper_85">
-<div class="width_30 f_left">
-<div class="wrapper_50">
-<img class="fix_zoom" src="img/nayami.png">
-</div>
-</div>
-<div class="width_70 f_right">
-<div class="space_2"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_9">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_88">
-<p class="font_125 line_h_150">
-ポータルからの集客が低下している
-</p>
-</li>
-</ul>
-<div class="space_1"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_9">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_88">
-<p class="font_125 line_h_150">
-作業効率はあがったけれど、反響率は期待外れ
-</p>
-</li>
-</ul>
-<div class="space_1"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_9">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_88">
-<p class="font_125 line_h_150">
-管理画面が使いづらい
-</p>
-</li>
-</ul>
-<div class="space_1"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_9">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_88">
-<p class="font_125 line_h_150">
-『ポータル頼り』で将来が不安
-</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="view_tabsp">
-<div class="wrapper_25">
-<img class="fix_zoom" src="img/nayami.png">
-</div>
-<div class="space_2"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_8">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_89">
-<p class="font_100 line_h_150">
-ポータルからの集客が低下している
-</p>
-</li>
-</ul>
-<div class="space_1"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_8">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_89">
-<p class="font_100 line_h_150">
-作業効率はあがったけれど、反響率は期待外れ
-</p>
-</li>
-</ul>
-<div class="space_1"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_8">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_89">
-<p class="font_100 line_h_150">
-管理画面が使いづらい
-</p>
-</li>
-</ul>
-<div class="space_1"><!-- スペース --></div>
-<ul class="flex flex_center">
-<li class="f_sub width_8">
-<img class="fix_zoom" src="img/check.png">
-</li>
-<li class="f_sub width_89">
-<p class="font_100 line_h_150">
-『ポータル頼り』で将来が不安
-</p>
-</li>
-</ul>
-</div>
-<div class="space_5"><!-- スペース --></div>
-<div class="space_3"><!-- スペース --></div>
-</div>
-</section>
+	<section class="wrapper_100 bg_white">
+	<div class="space_5"></div>
+	<div class="space_2"></div>
+	<p class="view_pc font_300 bold line_h_100 txt_center">従来のシステムとの違い</p>
+	<p class="view_tabsp font_200 bold line_h_100 txt_center">従来のシステムとの違い</p>
+	<div class="space_4"></div>
+		<div class="cont_wrapper_75">
+			<table class="width_100 view_pc" style="border-collapse:separate;border-spacing:0.25vw;">
+				<thead>
+					<tr>
+						<th class="width_59 bg_base1 font_125 line_h_200 white bold txt_center" colspan="2"></th>
+						<th class="width_20 bg_base1 font_125 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">他社コンバーター</p></th>
+						<th class="width_20 bg_base1 font_125 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">みらいえ</p></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="bg_w_grey font_100 line_h_200 bold txt_left" rowspan="5">
+							<p class="txt_lpad_1 txt_rpad_1">物件管理
+						</th>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">UI/UX中心の設計<br>
+							(インプレースエディタ､Drag&Drop登録､オンデマンドヘルプ)</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">ポータル内SEO（花びら、代表物件）に対応</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">AI､オープンデータによる物件入力の自動化</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">特殊レイアウト対応</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_100 txt_center">
+							<p class="txt_tpad_05 txt_bpad_05 txt_lpad_1 txt_rpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_100 line_h_100">（打ち直し不要）</span></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">オンデマンド画像編集</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<th class="bg_w_grey font_100 line_h_200 bold txt_left" rowspan="2">
+							<p class="txt_lpad_1 txt_rpad_1">顧客管理</p>
+						</th>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">簡単HTMLメール作成機能</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">営業メール作成サポート機能</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<th class="bg_w_grey font_100 line_h_200 bold txt_left" rowspan="2">
+							<p class="txt_lpad_1 txt_rpad_1">システム設定</p>
+						</th>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">多店舗に強い<br>
+							(店舗間物件コピー機能､多店舗権限設定など)</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_100 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">帳票出力</p>
+						</td>
+						<td class="bg_base2 font_100 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_100 txt_center">
+							<p class="txt_tpad_05 txt_bpad_05 txt_lpad_1 txt_rpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_100 line_h_100">（147種類）</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="width_100 view_tabsp" style="border-collapse:separate;border-spacing:2px;">
+				<thead>
+					<tr>
+						<th class="width_59 bg_base1 font_75 line_h_200 white bold txt_center" colspan="2"></th>
+						<th class="width_20 bg_base1 font_60 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">他社<br>コンバーター</p></th>
+						<th class="width_20 bg_base1 font_75 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">みらいえ</p></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="bg_w_grey font_75 line_h_200 bold txt_left" rowspan="5">
+							<p class="txt_lpad_1 txt_rpad_1">物件管理
+						</th>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">UI/UX中心の設計<br>
+							(インプレースエディタ､Drag&Drop登録､オンデマンドヘルプ)</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">ポータル内SEO（花びら、代表物件）に対応</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">AI､オープンデータによる物件入力の自動化</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">特殊レイアウト対応</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_75 txt_center">
+							<p class="txt_tpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_60 line_h_150 txt_bpad_05">打直し不要</span></p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">オンデマンド画像編集</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<th class="bg_w_grey font_75 line_h_200 bold txt_left" rowspan="2">
+							<p class="txt_lpad_1 txt_rpad_1">顧客管理</p>
+						</th>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">簡単HTMLメール作成機能</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">営業メール作成サポート機能</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<th class="bg_w_grey font_75 line_h_200 bold txt_left" rowspan="2">
+							<p class="txt_lpad_1 txt_rpad_1">システム設定</p>
+						</th>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">多店舗に強い<br>
+							(店舗間物件コピー機能､多店舗権限設定など)</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="bg_ww_grey font_75 line_h_150 txt_left">
+							<p class="txt_lpad_1 txt_rpad_1">帳票出力</p>
+						</td>
+						<td class="bg_base2 font_75 line_h_150 txt_center">
+							<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
+						</td>
+						<td class="bg_base2 font_75 txt_center">
+							<p class="txt_tpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_60 line_h_150 txt_bpad_05">147種類</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="space_3"></div>
+			<div class="cont_wrapper_90 txt_center">
+			<p class="view_pc font_125">
+			AIとビッグデータを扱う分析ツールは数多くありますが、あくまで分析のみといったシステムが多い中、<br>
+			弊社は業界に特化する事により、業務の自動化に最適化の工程を追加する事に成功。<br>
+			「不動産ポータル内」「自然検索内」共にSEO対策まで完全サポート。<br>
+			一度体験したら、もう文字を流し込むだけの自動化コンバーターには戻れなくなる事請け合いです。<br>
+			</p>
+			<p class="view_tabsp font_100">
+			AIとビッグデータを扱う分析ツールは<br>
+			数多くありますが、<br>
+			あくまで分析のみといったシステムが多い中、<br>
+			弊社は業界に特化する事により、<br>
+			業務の自動化に最適化の工程を追加する事に成功。<br>
+			「不動産ポータル内」「自然検索内」共に<br>
+			SEO対策まで完全サポート。<br>
+			一度体験したら、もう文字を流し込むだけの自動化<br>
+			コンバーターには戻れなくなる事請け合いです。<br>
+			</p>
+		</div>
+	<div class="space_5"></div>
+	<div class="space_3"></div>
+	</section>
 
-<section class="wrapper_100 bg_white">
-<div class="space_5"><!-- スペース --></div>
-<div class="space_2"><!-- スペース --></div>
-<p class="view_pc font_150 bold line_h_150 txt_center">
-<span class="font_200">作業効率</span>を上げつつ<span class="font_200">反響率</span>も上げたいなら
-</p>
-<p class="view_pc font_300 bold line_h_150 txt_center">
-<span class="base1">AI</span>と<span class="base1">ビッグデータ</span>を駆使した<span class="base1">みらいえ</span>！
-</p>
-<p class="view_tabsp font_75 bold line_h_150 txt_center">
-<span class="font_100">作業効率</span>を上げつつ<span class="font_100">反響率</span>も上げたいなら
-</p>
-<p class="view_tabsp font_150 bold line_h_150 txt_center">
-<span class="base1">AI</span>と<span class="base1">ビッグデータ</span>を駆使した<br><span class="base1">みらいえ</span>！
-</p>
-<div class="space_3"><!-- スペース --></div>
-<div class="cont_wrapper_75">
-<ul class="flex flex_center cont_wrapper_85">
-<li class="f_sub width_32 bg_img">
-<img class="fix_zoom" src="img/point.png">
-<div class="t_50 txt_center">
-<p class="view_pc font_200 line_h_150 base1">
-自動ツールで<br>
-<span class="bold base1 u_line_m_red">工数大幅削減</span>
-</p>
-<p class="view_tabsp font_100 line_h_150 base1">
-自動ツールで<br>
-<span class="bold base1 u_line_t_red">工数大幅削減</span>
-</p>
-</div>
-</li>
-<li class="f_sub width_32 bg_img">
-<img class="fix_zoom" src="img/point.png">
-<div class="t_50 txt_center">
-<p class="view_pc font_200 line_h_150 base1">
-<span class="bold base1 u_line_m_red">AI</span>による<br>
-<span class="bold base1 u_line_m_red">ポータルSEO</span>
-</p>
-<p class="view_tabsp font_100 line_h_150 base1">
-<span class="bold base1 u_line_t_red">AI</span>による<br>
-<span class="bold base1 u_line_t_red">ポータルSEO</span>
-</p>
-</div>
-</li>
-<li class="f_sub width_32 bg_img">
-<img class="fix_zoom" src="img/point.png">
-<div class="t_50 txt_center">
-<p class="view_pc font_200 line_h_150 base1">
-<span class="bold base1 u_line_m_red">直感的</span>な<br>
-操作画面
-</p>
-<p class="view_tabsp font_100 line_h_150 base1">
-<span class="bold base1 u_line_t_red">直感的</span>な<br>
-操作画面
-</p>
-</div>
-</li>
-</ul>
-<div class="space_3"><!-- スペース --></div>
-<div class="cont_wrapper_90 txt_center">
-<p class="view_pc font_125">
-AIとビッグデータを不動産業界で初めて導入し、<br>
-データの分析だけでなく実作業までサポートすることができるようになりました。<br>
-これにより他社不動産管理システムと劣ることなく作業効率UPしつつ、<br>
-ポータルサイトにてより多くのユーザーにみてもらうことで<br>
-集客・売上UPまで実現できるのがこの「みらいえ」です。
-</p>
-<p class="view_tabsp font_100">
-AIとビッグデータを不動産業界で初めて導入し、<br>
-データの分析だけでなく実作業まで<br>
-サポートすることができるようになりました。<br>
-これにより他社不動産管理システムと<br>
-劣ることなく作業効率UPしつつ、<br>
-ポータルサイトにて<br>
-より多くのユーザーにみてもらうことで<br>
-集客・売上UPまで実現できるのが<br>
-この「みらいえ」です。
-</p>
-</div>
-<div class="space_5"><!-- スペース --></div>
-<div class="space_3"><!-- スペース --></div>
-</div>
-</section>
-
-<section class="wrapper_100 bg_white view_pc">
-<div class="bg_img wrapper_100">
-<img class="fix_zoom" src="img/bg_1.png">
-<div class="t50_r0 txt_left rspace_5">
-<p class="font_200 bold line_h_150 base1">
-AI導入で業務<span class="mincho base1">70％</span>カットに成功
-</p>
-<p class="font_150 bold line_h_150 base1">
-ポータルごとのレイアウトにも自動最適化
-</p>
-<div class="space_2"><!-- スペース --></div>
-<p class="font_125 line_h_150">
-物件入力など、これまで手間のかかった作業を<br>
-人工知能（AI）により自動化。<br>
-入力補助で業務効率がアップ、<br>
-負荷を70％削減(当社比)することに成功しました。<br>
-画像の自動振り分けからコメント作成まで<br>
-人工知能がサポート。<br>
-文章を考えるのが苦手な人や新人スタッフでも<br>
-簡単にご利用いただけます。
-</p>
-</div>
-</div>
-<div class="bg_img wrapper_100">
-<img class="fix_zoom" src="img/bg_2.png">
-<div class="t50_l0 txt_left lspace_5">
-<p class="font_150 bold line_h_150 base1">
-ビッグデータを活用して
-</p>
-<p class="font_200 bold line_h_150 base1">
-ポータルサイトSEOにも対応
-</p>
-<div class="space_2"><!-- スペース --></div>
-<p class="font_125 line_h_150">
-ビッグデータを活用したポータルサイト内のSEO対策で、<br>
-周辺施設情報、空室情報も集約するように設計し、<br>
-「不動産ポータル内」「自然検索内」共に<br>
-検索で上位表示できるようにリンク構造を最適化。<br>
-集客に大きな影響を与えます。
-</p>
-</div>
-</div>
-<div class="bg_img wrapper_100">
-<img class="fix_zoom" src="img/bg_3.png">
-<div class="t50_r0 txt_left rspace_5">
-<p class="font_200 bold line_h_150 base1">
-自慢の使い勝手
-</p>
-<p class="font_150 bold line_h_150 base1">
-ITに疎い方でも簡単に使いこなしていただけます
-</p>
-<div class="space_2"><!-- スペース --></div>
-<p class="font_125 line_h_150">
-みらいえは機能の提供で満足せず、<br>
-利用されるユーザーの使い勝手を最優先で考えて<br>
-基礎から設計したシステムです。<br>
-「管理画面が使いにくい」<br>
-「高度な機能ばかりで使いこなせない」<br>
-「簡単な一括更新ができなくて不便」<br>
-といったよくある不満を解決しています！
-</p>
-</div>
-</div>
-</section>
-<section class="bg_base2 wrapper_100 bg_white view_tabsp txt_center">
-<div class="space_5"><!-- スペース --></div>
-<div class="space_2"><!-- スペース --></div>
-<p class="font_150 bold line_h_150 base1">
-AI導入で業務<span class="mincho base1 bold">70％</span>カットに成功
-</p>
-<p class="font_125 bold line_h_150 base1">
-ポータルごとのレイアウトにも自動最適化
-</p>
-<div class="space_2"><!-- スペース --></div>
-<img class="fix_zoom" src="img/bg_1_sp.png">
-<div class="cont_wrapper_75">
-<div class="space_2"><!-- スペース --></div>
-<p class="font_100 line_h_150">
-物件入力など、<br>
-これまで手間のかかった作業を<br>
-人工知能（AI）により自動化。<br>
-入力補助で業務効率がアップ、<br>
-負荷を70％削減(当社比)することに<br>
-成功しました。<br>
-画像の自動振り分けからコメント作成まで<br>
-人工知能がサポート。<br>
-文章を考えるのが苦手な人や<br>
-新人スタッフでも<br>
-簡単にご利用いただけます。
-</p>
-</div>
-<div class="space_5"><!-- スペース --></div>
-<div class="space_3"><!-- スペース --></div>
-</section>
-<section class="bg_white wrapper_100 bg_white view_tabsp txt_center">
-<div class="space_5"><!-- スペース --></div>
-<div class="space_2"><!-- スペース --></div>
-<p class="font_125 bold line_h_150 base1">
-ビッグデータを活用して
-</p>
-<p class="font_150 bold line_h_150 base1">
-ポータルサイトSEOにも対応
-</p>
-<div class="space_2"><!-- スペース --></div>
-<img class="fix_zoom" src="img/bg_2_sp.png">
-<div class="cont_wrapper_75">
-<div class="space_2"><!-- スペース --></div>
-<p class="font_100 line_h_150">
-ビッグデータを活用した<br>
-ポータルサイト内のSEO対策で、<br>
-周辺施設情報、空室情報も<br>
-集約するように設計し、<br>
-「不動産ポータル内」「自然検索内」共に<br>
-検索で上位表示できるように<br>
-リンク構造を最適化。<br>
-集客に大きな影響を与えます。
-</p>
-</div>
-<div class="space_5"><!-- スペース --></div>
-<div class="space_3"><!-- スペース --></div>
-</section>
-<section class="bg_base2 wrapper_100 bg_white view_tabsp txt_center">
-<div class="space_5"><!-- スペース --></div>
-<div class="space_2"><!-- スペース --></div>
-<p class="font_150 bold line_h_150 base1">
-自慢の使い勝手
-</p>
-<p class="font_125 bold line_h_150 base1">
-ITに疎い方でも簡単に使いこなしていただけます
-</p>
-<div class="space_2"><!-- スペース --></div>
-<img class="fix_zoom" src="img/bg_3_sp.png">
-<div class="cont_wrapper_75">
-<div class="space_2"><!-- スペース --></div>
-<p class="font_100 line_h_150">
-みらいえは機能の提供で満足せず、<br>
-利用されるユーザーの<br>
-使い勝手を最優先で考えて<br>
-基礎から設計したシステムです。<br>
-「管理画面が使いにくい」<br>
-「高度な機能ばかりで使いこなせない」<br>
-「簡単な一括更新ができなくて不便」<br>
-といったよくある不満を解決しています！
-</p>
-</div>
-<div class="space_5"><!-- スペース --></div>
-<div class="space_3"><!-- スペース --></div>
-</section>
-
-<section class="wrapper_100 bg_base1">
-<div class="space_1"><!-- スペース --></div>
-<div class="view_tabsp space_1"><!-- スペース --></div>
-<p class="view_pc white font_200 bold line_h_200 txt_center">
-無料デモンストレーション実施中！
-</p>
-<p class="view_tabsp white font_150 bold line_h_150 txt_center">
-無料デモンストレーション実施中！
-</p>
-<div class="space_1"><!-- スペース --></div>
-<ul class="cont_wrapper_50 flex_1">
-<li class="f_sub width_45 txt_center">
-<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="tel:0332092750">
-<div class="space_1"><!-- スペース --></div>
-<span class="font_75 bold line_h_100 txt_bpad_05">[平日] 10:00～21:00<br></span>
-<i class="fa fa-phone-square"></i>&nbsp;03-3209-2750&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
-<div class="space_1"><!-- スペース --></div>
-</a>
-</li>
-<li class="f_sub width_45 txt_center">
-<a class="square_btn bg_white width_100 box_radius_5 font_150 bold line_h_150" href="#form">
-<div class="space_1"><!-- スペース --></div>
-<span class="font_75 bold line_h_100 txt_bpad_05">入力は1分で完了します！<br></span>
-<i class="far fa-envelope"></i>&nbsp;お問い合わせ&nbsp;<i class="far fa-arrow-alt-circle-right"></i>
-<div class="space_1"><!-- スペース --></div>
-</a>
-</li>
-</ul>
-<div class="space_3"><!-- スペース --></div>
-</section>
-
-<section class="wrapper_100 bg_white">
-<div class="space_5"><!-- スペース --></div>
-<div class="space_2"><!-- スペース --></div>
-<p class="view_pc font_300 bold line_h_100 txt_center">従来のシステムとの違い</p>
-<p class="view_tabsp font_200 bold line_h_100 txt_center">従来のシステムとの違い</p>
-<div class="space_4"><!-- スペース --></div>
+	<section class="wrapper_100 bg_base1">
 	<div class="cont_wrapper_75">
-		<table class="width_100 view_pc" style="border-collapse:separate;border-spacing:0.25vw;">
-			<thead>
-				<tr>
-					<th class="width_59 bg_base1 font_125 line_h_200 white bold txt_center" colspan="2"></th>
-					<th class="width_20 bg_base1 font_125 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">他社コンバーター</p></th>
-					<th class="width_20 bg_base1 font_125 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">みらいえ</p></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th class="bg_w_grey font_100 line_h_200 bold txt_left" rowspan="5">
-						<p class="txt_lpad_1 txt_rpad_1">物件管理
-					</th>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">UI/UX中心の設計<br>
-						(インプレースエディタ､Drag&Drop登録､オンデマンドヘルプ)</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">ポータル内SEO（花びら、代表物件）に対応</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">AI､オープンデータによる物件入力の自動化</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">特殊レイアウト対応</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_100 txt_center">
-						<p class="txt_tpad_05 txt_bpad_05 txt_lpad_1 txt_rpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_100 line_h_100">（打ち直し不要）</span></p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">オンデマンド画像編集</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<th class="bg_w_grey font_100 line_h_200 bold txt_left" rowspan="2">
-						<p class="txt_lpad_1 txt_rpad_1">顧客管理</p>
-					</th>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">簡単HTMLメール作成機能</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">営業メール作成サポート機能</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<th class="bg_w_grey font_100 line_h_200 bold txt_left" rowspan="2">
-						<p class="txt_lpad_1 txt_rpad_1">システム設定</p>
-					</th>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">多店舗に強い<br>
-						(店舗間物件コピー機能､多店舗権限設定など)</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_100 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">帳票出力</p>
-					</td>
-					<td class="bg_base2 font_100 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_100 txt_center">
-						<p class="txt_tpad_05 txt_bpad_05 txt_lpad_1 txt_rpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_100 line_h_100">（147種類）</span></p>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<table class="width_100 view_tabsp" style="border-collapse:separate;border-spacing:2px;">
-			<thead>
-				<tr>
-					<th class="width_59 bg_base1 font_75 line_h_200 white bold txt_center" colspan="2"></th>
-					<th class="width_20 bg_base1 font_60 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">他社<br>コンバーター</p></th>
-					<th class="width_20 bg_base1 font_75 line_h_200 white bold txt_center"><p class="txt_lpad_1 txt_rpad_1 white">みらいえ</p></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th class="bg_w_grey font_75 line_h_200 bold txt_left" rowspan="5">
-						<p class="txt_lpad_1 txt_rpad_1">物件管理
-					</th>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">UI/UX中心の設計<br>
-						(インプレースエディタ､Drag&Drop登録､オンデマンドヘルプ)</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">ポータル内SEO（花びら、代表物件）に対応</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">AI､オープンデータによる物件入力の自動化</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">特殊レイアウト対応</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_75 txt_center">
-						<p class="txt_tpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_60 line_h_150 txt_bpad_05">打直し不要</span></p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">オンデマンド画像編集</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<th class="bg_w_grey font_75 line_h_200 bold txt_left" rowspan="2">
-						<p class="txt_lpad_1 txt_rpad_1">顧客管理</p>
-					</th>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">簡単HTMLメール作成機能</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">営業メール作成サポート機能</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<th class="bg_w_grey font_75 line_h_200 bold txt_left" rowspan="2">
-						<p class="txt_lpad_1 txt_rpad_1">システム設定</p>
-					</th>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">多店舗に強い<br>
-						(店舗間物件コピー機能､多店舗権限設定など)</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold orange font_150">△</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold base1 font_150">〇</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="bg_ww_grey font_75 line_h_150 txt_left">
-						<p class="txt_lpad_1 txt_rpad_1">帳票出力</p>
-					</td>
-					<td class="bg_base2 font_75 line_h_150 txt_center">
-						<p class="txt_lpad_1 txt_rpad_1 bold grey font_150">×</p>
-					</td>
-					<td class="bg_base2 font_75 txt_center">
-						<p class="txt_tpad_1 bold base1 font_150 line_h_100">〇<br><span class="font_60 line_h_150 txt_bpad_05">147種類</span></p>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<div class="space_3"><!-- スペース --></div>
-		<div class="cont_wrapper_90 txt_center">
-		<p class="view_pc font_125">
-		AIとビッグデータを扱う分析ツールは数多くありますが、あくまで分析のみといったシステムが多い中、<br>
-		弊社は業界に特化する事により、業務の自動化に最適化の工程を追加する事に成功。<br>
-		「不動産ポータル内」「自然検索内」共にSEO対策まで完全サポート。<br>
-		一度体験したら、もう文字を流し込むだけの自動化コンバーターには戻れなくなる事請け合いです。<br>
-		</p>
-		<p class="view_tabsp font_100">
-		AIとビッグデータを扱う分析ツールは<br>
-		数多くありますが、<br>
-		あくまで分析のみといったシステムが多い中、<br>
-		弊社は業界に特化する事により、<br>
-		業務の自動化に最適化の工程を追加する事に成功。<br>
-		「不動産ポータル内」「自然検索内」共に<br>
-		SEO対策まで完全サポート。<br>
-		一度体験したら、もう文字を流し込むだけの自動化<br>
-		コンバーターには戻れなくなる事請け合いです。<br>
-		</p>
+	<div class="space_3"></div>
+	<a href="#form"><img class="fix_zoom" src="img/bana.png" alt=""></a>
+	<div class="space_3"></div>
 	</div>
-<div class="space_5"><!-- スペース --></div>
-<div class="space_3"><!-- スペース --></div>
-</section>
+	</section>
 
-<section class="wrapper_100 bg_base1">
-<div class="cont_wrapper_75">
-<div class="space_3"><!-- スペース --></div>
-<a href="#form"><img class="fix_zoom" src="img/bana.png" alt=""></a>
-<div class="space_3"><!-- スペース --></div>
-</div>
-</section>
+	<section class="wrapper_100 bg_white">
+	<div class="cont_wrapper_75">
+	<div class="space_5"></div>
+	<div class="space_2"></div>
+	<p class="view_pc font_300 bold line_h_100 txt_center">よくある質問</p>
+	<p class="view_tabsp font_200 bold line_h_100 txt_center">よくある質問</p>
+	<div class="space_4"></div>
+	<div>
+		<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
+				<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">他の不動産管理システムとの違いは何ですか？</p></td>
+			</tr>
+			<tr class="bg_white">
+				<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
+				<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">AIとビッグデータを活用している点です。他社のシステムは作業効率化に重点を置いていたため、反響率が下がってしまっているというお悩みも多く受けていますが、その集客の面まで網羅したのが当社のみらいえです。</p></td>
+			</tr>
+		</table>
+		<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
+				<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">他の不動産管理システムとの違いは何ですか？</p></td>
+			</tr>
+			<tr class="bg_white width_100">
+				<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
+				<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">AIとビッグデータを活用している点です。他社のシステムは作業効率化に重点を置いていたため、反響率が下がってしまっているというお悩みも多く受けていますが、その集客の面まで網羅したのが当社のみらいえです。</p></td>
+			</tr>
+		</table>
+	</div>
 
-<section class="wrapper_100 bg_white">
-<div class="cont_wrapper_75">
-<div class="space_5"><!-- スペース --></div>
-<div class="space_2"><!-- スペース --></div>
-<p class="view_pc font_300 bold line_h_100 txt_center">よくある質問</p>
-<p class="view_tabsp font_200 bold line_h_100 txt_center">よくある質問</p>
-<div class="space_4"><!-- スペース --></div>
-<div>
-	<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
-			<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">他の不動産管理システムとの違いは何ですか？</p></td>
-		</tr>
-		<tr class="bg_white">
-			<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
-			<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">AIとビッグデータを活用している点です。他社のシステムは作業効率化に重点を置いていたため、反響率が下がってしまっているというお悩みも多く受けていますが、その集客の面まで網羅したのが当社のみらいえです。</p></td>
-		</tr>
-	</table>
-	<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
-			<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">他の不動産管理システムとの違いは何ですか？</p></td>
-		</tr>
-		<tr class="bg_white width_100">
-			<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
-			<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">AIとビッグデータを活用している点です。他社のシステムは作業効率化に重点を置いていたため、反響率が下がってしまっているというお悩みも多く受けていますが、その集客の面まで網羅したのが当社のみらいえです。</p></td>
-		</tr>
-	</table>
-</div>
+	<div class="space_2"></div>
 
-<div class="space_2"><!-- スペース --></div>
+	<div>
+		<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
+				<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">AIを使うとどんなメリットがあるのですか？</p></td>
+			</tr>
+			<tr class="bg_white">
+				<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
+				<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">一番のメリットは作業効率と反響率のアップを両立できる点です。煩雑していた物件情報の登録作業をAIが自動入力するため、各ポータルごとに違う設定にも対応できます。これまで数百項目もあった入力項目のうち400項目以上がワンクリックで設定可能です。人の手で行うのは、出稿時のエラーチェックや重要項目の確認・調整だけ。これまでにない作業効率化と反響拡大を両立させているのが、みらいえのAIです。</p></td>
+			</tr>
+		</table>
+		<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
+				<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">AIを使うとどんなメリットがあるのですか？</p></td>
+			</tr>
+			<tr class="bg_white width_100">
+				<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
+				<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">一番のメリットは作業効率と反響率のアップを両立できる点です。煩雑していた物件情報の登録作業をAIが自動入力するため、各ポータルごとに違う設定にも対応できます。これまで数百項目もあった入力項目のうち400項目以上がワンクリックで設定可能です。人の手で行うのは、出稿時のエラーチェックや重要項目の確認・調整だけ。これまでにない作業効率化と反響拡大を両立させているのが、みらいえのAIです。</p></td>
+			</tr>
+		</table>
+	</div>
 
-<div>
-	<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
-			<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">AIを使うとどんなメリットがあるのですか？</p></td>
-		</tr>
-		<tr class="bg_white">
-			<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
-			<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">一番のメリットは作業効率と反響率のアップを両立できる点です。煩雑していた物件情報の登録作業をAIが自動入力するため、各ポータルごとに違う設定にも対応できます。これまで数百項目もあった入力項目のうち400項目以上がワンクリックで設定可能です。人の手で行うのは、出稿時のエラーチェックや重要項目の確認・調整だけ。これまでにない作業効率化と反響拡大を両立させているのが、みらいえのAIです。</p></td>
-		</tr>
-	</table>
-	<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
-			<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">AIを使うとどんなメリットがあるのですか？</p></td>
-		</tr>
-		<tr class="bg_white width_100">
-			<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
-			<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">一番のメリットは作業効率と反響率のアップを両立できる点です。煩雑していた物件情報の登録作業をAIが自動入力するため、各ポータルごとに違う設定にも対応できます。これまで数百項目もあった入力項目のうち400項目以上がワンクリックで設定可能です。人の手で行うのは、出稿時のエラーチェックや重要項目の確認・調整だけ。これまでにない作業効率化と反響拡大を両立させているのが、みらいえのAIです。</p></td>
-		</tr>
-	</table>
-</div>
+	<div class="space_2"></div>
 
-<div class="space_2"><!-- スペース --></div>
+	<div>
+		<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
+				<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">パソコンでの物件管理をやったことがないのですが、使いこなせますか？</p></td>
+			</tr>
+			<tr class="bg_white">
+				<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
+				<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">パソコンでの作業に不慣れな方でも簡単にお使いいただける設計になっています。若干の練習と慣れは必要ですが、サポートセンターもございますので、安心して使い始めていただけます。</p></td>
+			</tr>
+		</table>
+		<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
+				<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">パソコンでの物件管理をやったことがないのですが、使いこなせますか？</p></td>
+			</tr>
+			<tr class="bg_white width_100">
+				<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
+				<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">パソコンでの作業に不慣れな方でも簡単にお使いいただける設計になっています。若干の練習と慣れは必要ですが、サポートセンターもございますので、安心して使い始めていただけます。</p></td>
+			</tr>
+		</table>
+	</div>
 
-<div>
-	<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
-			<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">パソコンでの物件管理をやったことがないのですが、使いこなせますか？</p></td>
-		</tr>
-		<tr class="bg_white">
-			<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
-			<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">パソコンでの作業に不慣れな方でも簡単にお使いいただける設計になっています。若干の練習と慣れは必要ですが、サポートセンターもございますので、安心して使い始めていただけます。</p></td>
-		</tr>
-	</table>
-	<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
-			<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">パソコンでの物件管理をやったことがないのですが、使いこなせますか？</p></td>
-		</tr>
-		<tr class="bg_white width_100">
-			<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
-			<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">パソコンでの作業に不慣れな方でも簡単にお使いいただける設計になっています。若干の練習と慣れは必要ですが、サポートセンターもございますので、安心して使い始めていただけます。</p></td>
-		</tr>
-	</table>
-</div>
+	<div class="space_2"></div>
 
-<div class="space_2"><!-- スペース --></div>
+	<div>
+		<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
+				<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">小規模の会社なのですが、導入はできますか？</p></td>
+			</tr>
+			<tr class="bg_white">
+				<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
+				<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">小規模な不動産会社でも大手に引けをとらない反響が取れる仕組みを組み込んだのがみらいえです。小規模で頑張っている会社様にこそ試していただきたいです。</p></td>
+			</tr>
+		</table>
+		<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
+				<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">小規模の会社なのですが、導入はできますか？</p></td>
+			</tr>
+			<tr class="bg_white width_100">
+				<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
+				<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">小規模な不動産会社でも大手に引けをとらない反響が取れる仕組みを組み込んだのがみらいえです。小規模で頑張っている会社様にこそ試していただきたいです。</p></td>
+			</tr>
+		</table>
+	</div>
 
-<div>
-	<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
-			<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">小規模の会社なのですが、導入はできますか？</p></td>
-		</tr>
-		<tr class="bg_white">
-			<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
-			<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">小規模な不動産会社でも大手に引けをとらない反響が取れる仕組みを組み込んだのがみらいえです。小規模で頑張っている会社様にこそ試していただきたいです。</p></td>
-		</tr>
-	</table>
-	<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
-			<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">小規模の会社なのですが、導入はできますか？</p></td>
-		</tr>
-		<tr class="bg_white width_100">
-			<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
-			<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">小規模な不動産会社でも大手に引けをとらない反響が取れる仕組みを組み込んだのがみらいえです。小規模で頑張っている会社様にこそ試していただきたいです。</p></td>
-		</tr>
-	</table>
-</div>
+	<div class="space_2"></div>
 
-<div class="space_2"><!-- スペース --></div>
+	<div>
+		<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
+				<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">ポータル出稿に対応しているサイトを教えてほしいのですが？</p></td>
+			</tr>
+			<tr class="bg_white">
+				<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
+				<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">Athome、HOME’Sをはじめとする主要な不動産ポータルサイトに対応しています。また、対応ポータルサイトは順次追加されております。</p></td>
+			</tr>
+		</table>
+		<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
+				<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">ポータル出稿に対応しているサイトを教えてほしいのですが？</p></td>
+			</tr>
+			<tr class="bg_white width_100">
+				<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
+				<td class="width_80 bg_white" style="vertical-align: center;"><p class="width_100 font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">Athome、HOME’Sをはじめとする主要な不動産ポータルサイトに対応しています。また、対応ポータルサイトは順次追加されております。</p></td>
+			</tr>
+		</table>
+	</div>
 
-<div>
-	<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
-			<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">ポータル出稿に対応しているサイトを教えてほしいのですが？</p></td>
-		</tr>
-		<tr class="bg_white">
-			<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
-			<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">Athome、HOME’Sをはじめとする主要な不動産ポータルサイトに対応しています。また、対応ポータルサイトは順次追加されております。</p></td>
-		</tr>
-	</table>
-	<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
-			<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">ポータル出稿に対応しているサイトを教えてほしいのですが？</p></td>
-		</tr>
-		<tr class="bg_white width_100">
-			<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
-			<td class="width_80 bg_white" style="vertical-align: center;"><p class="width_100 font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">Athome、HOME’Sをはじめとする主要な不動産ポータルサイトに対応しています。また、対応ポータルサイトは順次追加されております。</p></td>
-		</tr>
-	</table>
-</div>
+	<div class="space_2"></div>
 
-<div class="space_2"><!-- スペース --></div>
+	<div>
+		<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
+				<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">料金や契約最低期間はどのくらいですか？また、支払い方法はどのようになっていますか？</p></td>
+			</tr>
+			<tr class="bg_white">
+				<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
+				<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">最低６か月単位でのご契約になります。料金は実装内容によっても変わりますのでお問い合わせください。お支払い方法は銀行振込のみとさせていただいております。ご指定の金融機関よりお支払いをお願いいたします。なお、お支払いは前払いとさせていただいておりますので、予めご了承ください。</p></td>
+			</tr>
+		</table>
+		<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
+			<tr class="bg_base1 line_h_100">
+				<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
+				<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">料金や契約最低期間はどのくらいですか？また、支払い方法はどのようになっていますか？</p></td>
+			</tr>
+			<tr class="bg_white width_100">
+				<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
+				<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">最低６か月単位でのご契約になります。料金は実装内容によっても変わりますのでお問い合わせください。お支払い方法は銀行振込のみとさせていただいております。ご指定の金融機関よりお支払いをお願いいたします。なお、お支払いは前払いとさせていただいておりますので、予めご了承ください。</p></td>
+			</tr>
+		</table>
+	</div>
+	<div class="space_5"></div>
+	<div class="space_3"></div>
+	</div>
+	</section>
 
-<div>
-	<table class="wrapper_100 view_pc box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_12 bg_base1" style="vertical-align: center;"><p class="font_400 white bold txt_lpad_1">Q</p></th>
-			<td class="width_88 bg_base1" style="vertical-align: center;"><p class="font_150 bold white txt_lpad_2 txt_rpad_2">料金や契約最低期間はどのくらいですか？また、支払い方法はどのようになっていますか？</p></td>
-		</tr>
-		<tr class="bg_white">
-			<th class="width_12 bg_white" style="vertical-align: center;"><p class="font_400 base1 bold txt_lpad_1">A</p></th>
-			<td class="width_88 bg_white" style="vertical-align: center;"><p class="font_100 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">最低６か月単位でのご契約になります。料金は実装内容によっても変わりますのでお問い合わせください。お支払い方法は銀行振込のみとさせていただいております。ご指定の金融機関よりお支払いをお願いいたします。なお、お支払いは前払いとさせていただいておりますので、予めご了承ください。</p></td>
-		</tr>
-	</table>
-	<table class="wrapper_100 view_tabsp box_t_base1" style="border-collapse:collapse;">
-		<tr class="bg_base1 line_h_100">
-			<th class="width_20 bg_base1" style="vertical-align: center;"><p class="font_300 white bold txt_lpad_1">Q</p></th>
-			<td class="width_80 bg_base1" style="vertical-align: center;"><p class="font_125 bold white txt_lpad_2 txt_rpad_2">料金や契約最低期間はどのくらいですか？また、支払い方法はどのようになっていますか？</p></td>
-		</tr>
-		<tr class="bg_white width_100">
-			<th class="width_20 bg_white" style="vertical-align: center;"><p class="font_300 bold base1 txt_lpad_1">A</p></th>
-			<td class="width_80 bg_white" style="vertical-align: center;"><p class="font_75 b_gyrey txt_tpad_1 txt_bpad_1 txt_lpad_2 txt_rpad_2">最低６か月単位でのご契約になります。料金は実装内容によっても変わりますのでお問い合わせください。お支払い方法は銀行振込のみとさせていただいております。ご指定の金融機関よりお支払いをお願いいたします。なお、お支払いは前払いとさせていただいておりますので、予めご了承ください。</p></td>
-		</tr>
-	</table>
-</div>
-<div class="space_5"><!-- スペース --></div>
-<div class="space_3"><!-- スペース --></div>
-</div>
-</section>
+	<section id="form" class="bg_base2 wrapper_100">
 
-<section id="form" class="bg_base2 wrapper_100">
+	<div class="wrapper_100 bg_base1 txt_center">
+	<h2 class="view_pc white font_300 bold">お問い合わせフォーム</h2>
+	<h2 class="view_tabsp white font_200 bold line_h_200">お問い合わせフォーム</h2>
+	</div>
+	<div class="cont_wrapper_75 txt_center">
+	<div class="space_5"></div>
+			<div class="wrapper_60 clear tspace_1 bspace_05 view_pc" style="min-width:450px;">
+			<div class="col3_sp box_radius_9999 clear bg_base1">
+				<div class="wrapper_90 flex flex_center">
+				<div class="f_sub f_left width_19 txt_lpad_05"><img src="img/form_flow-icon1_white.png" class="fix_zoom" style=""></div>
+				<p class="f_sub f_right width_75 txt_lpad_05 txt_left font_100 bold white line_h_300">応募内容入力</p>
+				</div>
+			</div>
+			<div class="col3_sp box_radius_9999 clear line_h_200 bg_white">
+				<div class="wrapper_90 flex flex_center">
+				<div class="f_sub f_left width_23 txt_lpad_05"><img src="img/form_flow-icon2_gray.png" class="fix_zoom" style=""></div>
+				<p class="f_sub f_right width_72 txt_left txt_lpad_05 font_100 bold grey line_h_300">応募内容確認</p>
+				</div>
+			</div>
+			<div class="col3_sp box_radius_9999 clear line_h_200 bg_white">
+				<div class="wrapper_90 flex flex_center">
+				<div class="f_sub f_left width_20 txt_lpad_05"><img src="img/form_flow-icon3_gray.png" class="fix_zoom" style=""></div>
+				<p class="f_sub f_right width_74 txt_lpad_05 txt_left font_100 bold grey line_h_300">応募内容完了</p>
+				</div>
+			</div>
+			</div>
 
-<div class="wrapper_100 bg_base1 txt_center">
-<h2 class="view_pc white font_300 bold">お問い合わせフォーム</h2>
-<h2 class="view_tabsp white font_200 bold line_h_200">お問い合わせフォーム</h2>
-</div>
-<div class="cont_wrapper_75 txt_center">
-<div class="space_5"><!-- スペース --></div>
-        <div class="wrapper_60 clear tspace_1 bspace_05 view_pc" style="min-width:450px;">
-          <div class="col3_sp box_radius_9999 clear bg_base1">
-            <div class="wrapper_90 flex flex_center">
-              <div class="f_sub f_left width_19 txt_lpad_05"><img src="img/form_flow-icon1_white.png" class="fix_zoom" style=""></div>
-              <p class="f_sub f_right width_75 txt_lpad_05 txt_left font_100 bold white line_h_300">応募内容入力</p>
-            </div>
-          </div>
-          <div class="col3_sp box_radius_9999 clear line_h_200 bg_white">
-            <div class="wrapper_90 flex flex_center">
-              <div class="f_sub f_left width_23 txt_lpad_05"><img src="img/form_flow-icon2_gray.png" class="fix_zoom" style=""></div>
-              <p class="f_sub f_right width_72 txt_left txt_lpad_05 font_100 bold grey line_h_300">応募内容確認</p>
-            </div>
-          </div>
-          <div class="col3_sp box_radius_9999 clear line_h_200 bg_white">
-            <div class="wrapper_90 flex flex_center">
-              <div class="f_sub f_left width_20 txt_lpad_05"><img src="img/form_flow-icon3_gray.png" class="fix_zoom" style=""></div>
-              <p class="f_sub f_right width_74 txt_lpad_05 txt_left font_100 bold grey line_h_300">応募内容完了</p>
-            </div>
-          </div>
-        </div>
+			<div class="recruit_flow wrapper_100 clear tspace_1 bspace_05 view_tabsp" style="">
+			<div class="col3_sp_flow box_radius_9999 clear bg_base1" style="padding:0.35rem 0;">
+				<div class="wrapper_90">
+				<div class="f_left width_20" style="padding-top: 3.5vw;padding-left: 0.3rem;"><img src="img/form_flow-icon1_white.png" class="fix_zoom" style=""></div>
+				<p class="f_right width_75 white bold font_100">応募内容<br>入力</p>
+				</div>
+			</div>
+			<div class="col3_sp_flow box_radius_9999 clear bg_white" style="padding:0.35rem 0;">
+				<div class="wrapper_90">
+				<div class="f_left width_22" style="padding-top: 4vw;padding-left: 0.3rem;"><img src="img/form_flow-icon2_gray.png" class="fix_zoom" style=""></div>
+				<p class="f_right width_75 bold font_100" style="color:#969696;">応募内容<br>確認</p>
+				</div>
+			</div>
+			<div class="col3_sp_flow box_radius_9999 clear bg_white" style="padding:0.35rem 0;">
+				<div class="wrapper_90">
+				<div class="f_left width_22" style="padding-top: 4vw;padding-left: 0.3rem;"><img src="img/form_flow-icon3_gray.png" class="fix_zoom" style=""></div>
+				<p class="f_right width_75 bold font_100" style="color:#969696;">応募内容<br>完了</p>
+				</div>
+			</div>
+			</div>
 
-        <div class="recruit_flow wrapper_100 clear tspace_1 bspace_05 view_tabsp" style="">
-          <div class="col3_sp_flow box_radius_9999 clear bg_base1" style="padding:0.35rem 0;">
-            <div class="wrapper_90">
-              <div class="f_left width_20" style="padding-top: 3.5vw;padding-left: 0.3rem;"><img src="img/form_flow-icon1_white.png" class="fix_zoom" style=""></div>
-              <p class="f_right width_75 white bold font_100">応募内容<br>入力</p>
-            </div>
-          </div>
-          <div class="col3_sp_flow box_radius_9999 clear bg_white" style="padding:0.35rem 0;">
-            <div class="wrapper_90">
-              <div class="f_left width_22" style="padding-top: 4vw;padding-left: 0.3rem;"><img src="img/form_flow-icon2_gray.png" class="fix_zoom" style=""></div>
-              <p class="f_right width_75 bold font_100" style="color:#969696;">応募内容<br>確認</p>
-            </div>
-          </div>
-          <div class="col3_sp_flow box_radius_9999 clear bg_white" style="padding:0.35rem 0;">
-            <div class="wrapper_90">
-              <div class="f_left width_22" style="padding-top: 4vw;padding-left: 0.3rem;"><img src="img/form_flow-icon3_gray.png" class="fix_zoom" style=""></div>
-              <p class="f_right width_75 bold font_100" style="color:#969696;">応募内容<br>完了</p>
-            </div>
-          </div>
-        </div>
+	<div class="space_3"></div>
+	<div class="view_tabsp space_2"></div>
 
-<div class="space_3"><!-- スペース --></div>
-<div class="view_tabsp space_2"><!-- スペース --></div>
-
-	<form method="post" action="#form" enctype="multipart/form-data" novalidate>
-        <div class="entyr-form cont_wrapper_85">
-          <table class="width_100 txt_left clear" style="position:relative;">
-            <tbody>
-              <tr>
-                <td class="td_item1 font_100">
-                  <label for="input-name" class="bold" style="margin-top:0.5vw;">&nbsp;お名前&nbsp;</label>&nbsp;&nbsp;<span class="white box_radius_5 font_75 bold" style="background-color:#eb2828;">&nbsp;必須&nbsp;</span>
-                </td>
-                <td class="td_item2">
-                  <input class="validate[required]" id="input-name" type="text" name="your_name" value="" placeholder="例）田中　太郎">
-                  				  <hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-              <tr>
-                <td class="td_item1 font_100" style="">
-                  <label for="input-tel" class="bold" style="">&nbsp;電話番号&nbsp;</label>&nbsp;&nbsp;<span class="white box_radius_5 font_75 bold" style="background-color:#eb2828;">&nbsp;必須&nbsp;</span>
-                </td>
-                <td class="">
-                  <input class="validate[required,custom[phone],maxSize[13]]" id="input-tel" type="tel" name="tel" value="" placeholder="例)0901231234">
-				  				  <hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-              <tr>
-                <td class="td_item1 font_100" style="">
-                  <label for="input-email" class="bold" style="">&nbsp;E-Mail&nbsp;</label>&nbsp;&nbsp;<span class="white box_radius_5 font_75 bold" style="background-color:#eb2828;">&nbsp;必須&nbsp;</span>
-                </td>
-                <td class="">
-                  <input class="validate[required,custom[email]]" id="input-email" type="email" name="email" value="" placeholder="例)abc@abc.co.jp">
-				  <hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-              <tr>
-                <td class="td_item1 font_100">
-                  <label for="input-company" class="bold" style="margin-top:0.5vw;">&nbsp;会社名（店舗名）&nbsp;</label>
-                </td>
-                <td class="td_item2">
-                  <input class="" id="input-company" type="text" name="company_name" value="" placeholder="例）○○株式会社">
-				  <hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-              <tr>
-                <td class="td_item1 font_100">
-                  <label for="input-num" class="bold" style="">&nbsp;宅建番号&nbsp;</label>
-                </td>
-                <td class="td_item2">
-                  <input id="input-num" type="text" name="num" value=""  placeholder="国土交通大臣（11）第1111号">
-                  <hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-              <tr>
-                <td class="td_item1 font_100" style="">
-                  <label for="input-area" class="bold" style="">&nbsp;お住まいの地域&nbsp;</label>
-                </td>
-                <td class="td_item2">
-                	<select id="input-area" name="area">
-						<option value="">地域を選択してください</option>
-						<option value="1" >北海道</option>
-						<option value="2" >青森県</option>
-						<option value="3" >岩手県</option>
-						<option value="4" >宮城県</option>
-						<option value="5" >秋田県</option>
-						<option value="6" >山形県</option>
-						<option value="7" >福島県</option>
-						<option value="8" >茨城県</option>
-						<option value="9" >栃木県</option>
-						<option value="10" >群馬県</option>
-						<option value="11" >埼玉県</option>
-						<option value="12" >千葉県</option>
-						<option value="13" >東京都</option>
-						<option value="14" >神奈川県</option>
-						<option value="15" >新潟県</option>
-						<option value="16" >富山県</option>
-						<option value="17" >石川県</option>
-						<option value="18" >福井県</option>
-						<option value="19" >山梨県</option>
-						<option value="20" >長野県</option>
-						<option value="21" >岐阜県</option>
-						<option value="22" >静岡県</option>
-						<option value="23" >愛知県</option>
-						<option value="24" >三重県</option>
-						<option value="25" >滋賀県</option>
-						<option value="26" >京都府</option>
-						<option value="27" >大阪府</option>
-						<option value="28" >兵庫県</option>
-						<option value="29" >奈良県</option>
-						<option value="30" >和歌山県</option>
-						<option value="31" >鳥取県</option>
-						<option value="32" >島根県</option>
-						<option value="33" >岡山県</option>
-						<option value="34" >広島県</option>
-						<option value="35" >山口県</option>
-						<option value="36" >徳島県</option>
-						<option value="37" >香川県</option>
-						<option value="38" >愛媛県</option>
-						<option value="39" >高知県</option>
-						<option value="40" >福岡県</option>
-						<option value="41" >佐賀県</option>
-						<option value="42" >長崎県</option>
-						<option value="43" >熊本県</option>
-						<option value="44" >大分県</option>
-						<option value="45" >宮崎県</option>
-						<option value="46" >鹿児島県</option>
-						<option value="47" >沖縄県</option>
-					</select>
+		<form method="post" action="#form" enctype="multipart/form-data" novalidate>
+			<div class="entyr-form cont_wrapper_85">
+			<table class="width_100 txt_left clear" style="position:relative;">
+				<tbody>
+				<tr>
+					<td class="td_item1 font_100">
+					<label for="input-name" class="bold" style="margin-top:0.5vw;">&nbsp;お名前&nbsp;</label>&nbsp;&nbsp;<span class="white box_radius_5 font_75 bold" style="background-color:#eb2828;">&nbsp;必須&nbsp;</span>
+					</td>
+					<td class="td_item2">
+					<input class="validate[required]" id="input-name" type="text" name="your_name" value="" placeholder="例）田中　太郎">
+									<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
+					</td>
+				</tr>
+				<tr>
+					<td class="td_item1 font_100" style="">
+					<label for="input-tel" class="bold" style="">&nbsp;電話番号&nbsp;</label>&nbsp;&nbsp;<span class="white box_radius_5 font_75 bold" style="background-color:#eb2828;">&nbsp;必須&nbsp;</span>
+					</td>
+					<td class="">
+					<input class="validate[required,custom[phone],maxSize[13]]" id="input-tel" type="tel" name="tel" value="" placeholder="例)0901231234">
+									<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
+					</td>
+				</tr>
+				<tr>
+					<td class="td_item1 font_100" style="">
+					<label for="input-email" class="bold" style="">&nbsp;E-Mail&nbsp;</label>&nbsp;&nbsp;<span class="white box_radius_5 font_75 bold" style="background-color:#eb2828;">&nbsp;必須&nbsp;</span>
+					</td>
+					<td class="">
+					<input class="validate[required,custom[email]]" id="input-email" type="email" name="email" value="" placeholder="例)abc@abc.co.jp">
 					<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-              <tr>
-                <td class="td_item1 font_100" style="">
-                  <label for="input-request" class="bold" style="">&nbsp;お問い合わせ種別&nbsp;</label>
-                </td>
-                <td class="td_item2 bold font_75">
-						<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="1">売買物件管理・ポータル連動</label></div>
-						<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="2">賃貸物件管理・ポータル連動</label></div>
-						<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="3">自社ホームページ作成</label></div>
-						<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="4">顧客管理</label></div>
-						<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="5">その他</label></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_item1 font_100">
+					<label for="input-company" class="bold" style="margin-top:0.5vw;">&nbsp;会社名（店舗名）&nbsp;</label>
+					</td>
+					<td class="td_item2">
+					<input class="" id="input-company" type="text" name="company_name" value="" placeholder="例）○○株式会社">
 					<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-              <tr>
-                <td class="td_item1 font_100">
-                  <label for="input-text" class="bold" style="">&nbsp;お問い合わせ内容&nbsp;</label>
-                </td>
-                <td class="">
-                  <textarea class="" rows="5" id="input-text" name="contact" placeholder="お問い合わせ内容"></textarea>
-				  <hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_item1 font_100">
+					<label for="input-num" class="bold" style="">&nbsp;宅建番号&nbsp;</label>
+					</td>
+					<td class="td_item2">
+					<input id="input-num" type="text" name="num" value=""  placeholder="国土交通大臣（11）第1111号">
+					<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
+					</td>
+				</tr>
+				<tr>
+					<td class="td_item1 font_100" style="">
+					<label for="input-area" class="bold" style="">&nbsp;お住まいの地域&nbsp;</label>
+					</td>
+					<td class="td_item2">
+						<select id="input-area" name="area">
+							<option value="">地域を選択してください</option>
+							<option value="1" >北海道</option>
+							<option value="2" >青森県</option>
+							<option value="3" >岩手県</option>
+							<option value="4" >宮城県</option>
+							<option value="5" >秋田県</option>
+							<option value="6" >山形県</option>
+							<option value="7" >福島県</option>
+							<option value="8" >茨城県</option>
+							<option value="9" >栃木県</option>
+							<option value="10" >群馬県</option>
+							<option value="11" >埼玉県</option>
+							<option value="12" >千葉県</option>
+							<option value="13" >東京都</option>
+							<option value="14" >神奈川県</option>
+							<option value="15" >新潟県</option>
+							<option value="16" >富山県</option>
+							<option value="17" >石川県</option>
+							<option value="18" >福井県</option>
+							<option value="19" >山梨県</option>
+							<option value="20" >長野県</option>
+							<option value="21" >岐阜県</option>
+							<option value="22" >静岡県</option>
+							<option value="23" >愛知県</option>
+							<option value="24" >三重県</option>
+							<option value="25" >滋賀県</option>
+							<option value="26" >京都府</option>
+							<option value="27" >大阪府</option>
+							<option value="28" >兵庫県</option>
+							<option value="29" >奈良県</option>
+							<option value="30" >和歌山県</option>
+							<option value="31" >鳥取県</option>
+							<option value="32" >島根県</option>
+							<option value="33" >岡山県</option>
+							<option value="34" >広島県</option>
+							<option value="35" >山口県</option>
+							<option value="36" >徳島県</option>
+							<option value="37" >香川県</option>
+							<option value="38" >愛媛県</option>
+							<option value="39" >高知県</option>
+							<option value="40" >福岡県</option>
+							<option value="41" >佐賀県</option>
+							<option value="42" >長崎県</option>
+							<option value="43" >熊本県</option>
+							<option value="44" >大分県</option>
+							<option value="45" >宮崎県</option>
+							<option value="46" >鹿児島県</option>
+							<option value="47" >沖縄県</option>
+						</select>
+						<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
+					</td>
+				</tr>
+				<tr>
+					<td class="td_item1 font_100" style="">
+					<label for="input-request" class="bold" style="">&nbsp;お問い合わせ種別&nbsp;</label>
+					</td>
+					<td class="td_item2 bold font_75">
+							<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="1">売買物件管理・ポータル連動</label></div>
+							<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="2">賃貸物件管理・ポータル連動</label></div>
+							<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="3">自社ホームページ作成</label></div>
+							<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="4">顧客管理</label></div>
+							<div class="col3_sp f_left"><label><input class="width_10 bg_base2" type="checkbox" name="request" value="5">その他</label></div>
+						<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
+					</td>
+				</tr>
+				<tr>
+					<td class="td_item1 font_100">
+					<label for="input-text" class="bold" style="">&nbsp;お問い合わせ内容&nbsp;</label>
+					</td>
+					<td class="">
+					<textarea class="" rows="5" id="input-text" name="contact" placeholder="お問い合わせ内容"></textarea>
+					<hr class="view_tabsp w_grey hr_1 tspace_5 bspace_5">
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			</div>
 
-<div class="space_2 view_pc"><!-- スペース --></div>
+	<div class="space_2 view_pc"></div>
 
-<div class="txt_center cont_wrapper_60 flex flex_center agreement" style="position:relative;">
-<div class="txt_center f_sub f_left width_10">
-<input id="agreement" class="font_125 validate[required]" type="checkbox" name="agreement" value="1"  checked>
-</div>
-<div class="txt_center f_sub f_right width_90">
-<label for="agreement"><a href="https://miraie-net.com/privacy/" target="_blank"><span class="view_pc font_150">プライバシーポリシーに同意する</span><span class="view_tabsp font_125">プライバシーポリシーに同意する</span></a></label>
-</div>
-</div>
+	<div class="txt_center cont_wrapper_60 flex flex_center agreement" style="position:relative;">
+	<div class="txt_center f_sub f_left width_10">
+	<input id="agreement" class="font_125 validate[required]" type="checkbox" name="agreement" value="1"  checked>
+	</div>
+	<div class="txt_center f_sub f_right width_90">
+	<label for="agreement"><a href="https://miraie-net.com/privacy/" target="_blank"><span class="view_pc font_150">プライバシーポリシーに同意する</span><span class="view_tabsp font_125">プライバシーポリシーに同意する</span></a></label>
+	</div>
+	</div>
 
-<div class="space_5"><!-- スペース --></div>
+	<div class="space_5"></div>
 
-<div class="wrapper_50">
-<input class="view_pc square_btn white bg_matcha box_radius_10 line_h_200 font_200 bold arial" type="submit" name="btn_confirm" value="入力内容を確認する">
-<input class="view_tabsp square_btn white bg_matcha box_radius_10 line_h_300 font_100 bold arial" type="submit" name="btn_confirm" value="入力内容を確認する">
-</div>
+	<div class="wrapper_50">
+	<input class="view_pc square_btn white bg_matcha box_radius_10 line_h_200 font_200 bold arial" type="submit" name="btn_confirm" value="入力内容を確認する">
+	<input class="view_tabsp square_btn white bg_matcha box_radius_10 line_h_300 font_100 bold arial" type="submit" name="btn_confirm" value="入力内容を確認する">
+	</div>
 
-	</form>
-	
-	<div class="space_5"><!-- スペース --></div>
-	<div class="space_3"><!-- スペース --></div>
-	
+		</form>
+		
+		<div class="space_5"></div>
+		<div class="space_3"></div>
+		
 	</section>
 
 </main>
 
 <footer class="wrapper_100 bg_black">
-<div class="cont_wrapper_75">
-<div class="space_2"><!-- スペース --></div>
-<div class="view_pc width_50 f_left">
-<p class="font_100 white">
-株式会社イー・ビジョン（e-vision Corporation）<br>
-〒160-0022　東京都新宿区新宿5-17-17 渡菱ビル6F<br>
-TEL 03-3209-2750 ／ FAX 03-3209-2751
-</p>
-</div>
-<div class="view_pc width_50 f_right txt_right">
-<div class="space_05"><!-- スペース --></div>
-<div class="width_15 f_right block"><a href="https://miraie-net.com" target="_blank"><img class="fix_zoom" src="img/company-logo.png"></a></div>
-<div class="space_05 clear"><!-- スペース --></div>
-<p class="font_100 white">
-<a class="font_100 white" href="https://miraie-net.com/privacy/" target="_blank">Privacy Policy</a>｜© e-vision
-</p>
-</div>
-<div class="view_tabsp">
-<div class="space_1"><!-- スペース --></div>
-<div class="wrapper_20 block"><a href="https://miraie-net.com" target="_blank"><img class="fix_zoom" src="img/company-logo.png"></a></div>
-<div class="space_1"><!-- スペース --></div>
-<p class="font_100 white txt_center">
-株式会社イー・ビジョン（e-vision Corporation）<br>
-〒160-0022　東京都新宿区新宿5-17-17 渡菱ビル6F<br>
-TEL 03-3209-2750 ／ FAX 03-3209-2751
-</p>
-<div class="space_1"><!-- スペース --></div>
-<p class="font_100 white txt_center">
-<a class="font_100 white" href="https://miraie-net.com/privacy/" target="_blank">Privacy Policy</a>｜© e-vision
-</p>
-</div>
-<div class="space_2"><!-- スペース --></div>
+	<div class="cont_wrapper_75">
+		<div class="space_2"></div>
+		<div class="view_pc width_50 f_left">
+			<p class="font_100 white">
+			株式会社イー・ビジョン（e-vision Corporation）<br>
+			〒160-0022　東京都新宿区新宿5-17-17 渡菱ビル6F<br>
+			TEL 03-3209-2750 ／ FAX 03-3209-2751
+			</p>
+		</div>
+		<div class="view_pc width_50 f_right txt_right">
+			<div class="space_05"></div>
+			<div class="width_15 f_right block"><a href="https://miraie-net.com" target="_blank"><img class="fix_zoom" src="img/company-logo.png"></a></div>
+			<div class="space_05 clear"></div>
+			<p class="font_100 white">
+				<a class="font_100 white" href="https://miraie-net.com/privacy/" target="_blank">Privacy Policy</a>｜© e-vision
+			</p>
+		</div>
+		<div class="view_tabsp">
+			<div class="space_1"></div>
+			<div class="wrapper_20 block"><a href="https://miraie-net.com" target="_blank"><img class="fix_zoom" src="img/company-logo.png"></a></div>
+			<div class="space_1"></div>
+			<p class="font_100 white txt_center">
+			株式会社イー・ビジョン（e-vision Corporation）<br>
+			〒160-0022　東京都新宿区新宿5-17-17 渡菱ビル6F<br>
+			TEL 03-3209-2750 ／ FAX 03-3209-2751
+			</p>
+			<div class="space_1"></div>
+			<p class="font_100 white txt_center">
+				<a class="font_100 white" href="https://miraie-net.com/privacy/" target="_blank">Privacy Policy</a>｜© e-vision
+			</p>
+		</div>
+		<div class="space_2"></div>
+	</div>
 </footer>
 </body>
 
